@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F6FF"
+        android:fitsSystemWindows="true"
+        tools:context=".fragments.MainFragment">
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+            <include layout="@layout/drawer_layout" />
+        </com.google.android.material.navigation.NavigationView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".ui.MainFragment">
+
+
+            <FrameLayout
+                android:id="@+id/frameLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottomNav" />
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemIconTint="@color/white"
+                android:background="@drawable/bottom_nav_back"
+                android:layout_alignParentBottom="true"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </RelativeLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

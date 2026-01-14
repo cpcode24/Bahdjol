@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.FeedbackFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryVariantColor"
+        app:navigationIcon="@drawable/ic__arrow_back">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_text" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/how_did_we_do"
+        android:textColor="@color/primaryVariantColor"
+        android:textSize="18sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:numStars="5"
+        android:stepSize="1"
+        android:isIndicator="true"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="#AAAAAA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/care_to_share_more_about_it"
+        android:textColor="@color/primaryVariantColor"
+        android:textSize="21sp" />
+    
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:autofillHints="Enter Note Text"
+        android:background="@drawable/feedback_back"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:lines="12"
+        android:maxLines="12"
+        android:minLines="12"
+        android:padding="5dp"
+        android:scrollbars="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="#AAAAAA" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/publish_feedback"
+        app:backgroundTint="@color/primaryVariantColor"
+        app:cornerRadius="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/your_review_will_be_posted_to_the_google_play_store"
+        android:textColor="@color/primaryVariantColor"
+        android:textSize="12sp" />
+
+</LinearLayout>
+</layout>

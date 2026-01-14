@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.SignUpFragment">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo"
+            app:tint="@color/primaryVariantColor" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ivLogo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:elevation="10dp">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_profile_"
+                        app:civ_border_width="1dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/ivCamera"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/ivProfile"
+                        android:layout_alignEnd="@id/ivProfile"
+                        android:layout_marginTop="-25dp"
+                        android:src="@drawable/ic_camera"
+                        android:tint="@color/primaryVariantColor"
+                        app:civ_border_width="0dp" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:autofillHints="name"
+                    android:background="@drawable/field_back"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/first_name"
+                    android:inputType="textPersonName"
+                    android:minHeight="45dp"
+                    android:padding="15dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etMaritalStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:autofillHints="name"
+                    android:background="@drawable/field_back"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/marital_status"
+                    android:inputType="text"
+                    android:minHeight="45dp"
+                    android:padding="15dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:autofillHints="name"
+                    android:background="@drawable/field_back"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/address"
+                    android:inputType="text"
+                    android:minHeight="45dp"
+                    android:padding="15dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:autofillHints="name"
+                    android:background="@drawable/field_back"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/phone_number"
+                    android:inputType="numberSigned"
+                    android:minHeight="45dp"
+                    android:padding="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="13sp" />
+
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:autofillHints="emailAddress"
+                    android:background="@drawable/field_back"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/email_phone_number"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="45dp"
+                    android:padding="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:autofillHints="password"
+                    android:background="@drawable/field_back"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:minHeight="45dp"
+                    android:padding="5dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="13sp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:elevation="5dp"
+                        android:layout_gravity="center"
+                        android:text="@string/sign_up"
+                        app:backgroundTint="@color/primaryVariantColor"
+                        app:cornerRadius="10dp" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>
